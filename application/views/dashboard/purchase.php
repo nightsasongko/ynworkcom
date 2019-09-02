@@ -75,7 +75,7 @@ include "header.php";
 							<h5 class="blue">
 								<b><?= $ap_item['nama']?></b>
 							</h5>
-							<p class="blue">
+							<p class="blue" style="min-height: 7rem;">
 								<?= substr($ap_item['deskripsi'], 0,80).'...'; ?>
 							</p>
 							<div class="row">
