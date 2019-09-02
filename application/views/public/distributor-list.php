@@ -49,7 +49,7 @@ include "header2.php";
 						<div class="body-panel px-3 pt-3 pb-5">
 							<h5 class="name-distributor"><b><?= $lm['nama']?></b></h5>
 							<div class="pb-3">
-								<p>
+								<p style="min-height: 3rem">
 								<?php echo substr($lm['alamat'], 0,20).'...'; ?>
 								</p>
 							</div>
