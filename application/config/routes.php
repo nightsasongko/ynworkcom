@@ -80,6 +80,7 @@ $route['checkout_post'] = "dbrd_distributor/checkout_post";
 $route['registrasi'] = "distributor/registrasi";
 $route['login'] = "akun/login";
 $route['lupapassword'] = "akun/lupapassword";
+$route['distributor-list/(:any)'] = "home/distributorlist/$2";
 $route['distributor-list'] = "home/distributorlist";
 $route['detail-distributor'] = "home/detaildistributor";
 $route['detail-produk'] = "home/detailproduk";

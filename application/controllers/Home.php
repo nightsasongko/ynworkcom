@@ -136,8 +136,29 @@ class Home extends CI_Controller {
 			{
 				$data['cek_login'] = "0";
 			}
+
+			$perpage = 4;
+			$page = $this->input->get('page');
+			$tambah = $this->input->get('tambah');
+			$data["jumlah_page"] = $this->distributor_model->jumlah_page_mamber($perpage);
+			$data["page_sekarang"] = $page;
+
+			// $data['list_member'] = $this->distributor_model->memberdistributor($perpage, $tambah);
+			
+			// $data['list_member'] = $this->distributor_model->listmember($perpage, $page);
 				
-			$data['list_member'] = $this->db->get_where('member', ['status' => 2])->result_array();
+			// $data['list_member'] = $this->db->get_where('member', ['status' => 2])->result_array();
+
+			$this->load->library('pagination');
+			$jumlah_data = $this->distributor_model->jumlah_data();
+			$config['base_url'] = base_url().'distributor-list/';
+			$config['per_page'] = 8;
+			$config['total_rows'] = $jumlah_data;
+			$from = $this->uri->segment(3);
+			$this->pagination->initialize($config);	
+			$data['list_member'] = $this->distributor_model->memberlist($config['per_page'],$from);
+			// var_dump($data['list_member']);die;
+
 			$this->load->view('public/distributor-list', $data);
 			
 		}

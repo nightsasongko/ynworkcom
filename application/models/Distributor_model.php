@@ -374,5 +374,48 @@ class Distributor_model extends CI_Model
         return $result;
     }
     
-    
+    function listmember($perpage, $page)
+    {
+        $awal  = ($page - 1) * $perpage;
+        $sql = "select * from member where status=2 limit $awal, $perpage";
+        $res = $this->db->query($sql);
+        $resulf = $res->result_array();
+        return $resulf;
+    }
+
+    function memberdistributor($perpage, $tambah)
+    {
+        $hasiltambah = $perpage+$tambah;
+        $sql = "select * from member where status=2 limit $hasiltambah FETCH NEXT $tambah ROWS ONLY";
+        $res = $this->db->query($sql);
+        $resulf = $res->result_array();
+        return $resulf;
+    }
+
+    function jumlah_page_mamber($perpage)
+    {
+        $sql = "select count(id_member) as jml from member where status = 2";
+        $res = $this->db->query($sql);
+        $row = $res->row_array();
+        $jml = $row['jml'];
+
+        $jmlpage = floor($jml / $perpage);
+        $jmlpage1 = $jmlpage;
+        $sisabagi = $jml % $perpage;
+        if ($sisabagi > 0) {
+            $jmlpage = $jmlpage + 1;
+        }
+            return $jmlpage1;
+    }
+
+    function memberlist($number,$offset)
+    {
+       $this->db->where('status', 2);
+        return $query = $this->db->get('member',$number,$offset)->result();
+               
+    }
+
+    function jumlah_data(){
+		return $this->db->get('member')->num_rows();
+	}
 }
