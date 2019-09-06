@@ -152,7 +152,7 @@ class Home extends CI_Controller {
 			$this->load->library('pagination');
 			$jumlah_data = $this->distributor_model->jumlah_data();
 			$config['base_url'] = base_url().'distributor-list/';
-			$config['per_page'] = 8;
+			$config['per_page'] = 2;
 			$config['total_rows'] = $jumlah_data;
 			$from = $this->uri->segment(3);
 			$this->pagination->initialize($config);	

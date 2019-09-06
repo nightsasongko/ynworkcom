@@ -416,6 +416,7 @@ class Distributor_model extends CI_Model
     }
 
     function jumlah_data(){
+        $this->db->where('status', 2);
 		return $this->db->get('member')->num_rows();
 	}
 }

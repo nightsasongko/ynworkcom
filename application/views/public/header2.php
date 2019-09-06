@@ -119,7 +119,7 @@
 									</div>
 							</li>
 							<li>
-								<a href="<?= base_url() ?>distributor-list" class="distributor-active">
+								<a href="<?= base_url() ?>distributor-list/toko/" class="distributor-active">
 									Distributor List
 								</a>
 							</li>
@@ -223,7 +223,7 @@
 				
 			</ul>
 		</div>
-		<a href="<?= base_url() ?>distributor-list">Distributor List</a>
+		<a href="<?= base_url() ?>distributor-list/toko/">Distributor List</a>
 		<?php if ($cek_login==1) {?>
 			<a href="<?= base_url() ?>dashboard" class="btn-orange mr-4">
 				Profile
