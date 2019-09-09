@@ -86,7 +86,7 @@ include "header.php";
 								</label>
 								<div class="col-sm-6 upload-btn">
 									<div class="img-thumbnail-cover">
-										<?php if ($profile['avatar'] == null) { ?>
+										<?php if ($profile['gambar_toko'] == null) { ?>
 											<img src="<?= base_url() ?>assets/gambar_distributor/gambar_toko/no-photo.jpg">
 										<?php } else { ?>
 											<img src="<?= base_url('assets/gambar_distributor/gambar_toko/') ?><?= $profile['gambar_toko']; ?>">
