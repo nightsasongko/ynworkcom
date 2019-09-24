@@ -23,6 +23,10 @@
 	<!-- Owl Carousel -->
 	<link rel="stylesheet" href="<?= base_url()?>assets/home_assets/OwlCarousel/dist/assets/owl.carousel.min.css">
 	<link rel="stylesheet" href="<?= base_url()?>assets/home_assets/OwlCarousel/dist/assets/owl.theme.default.min.css">
+	
+	<!-- magnific-popup -->
+	<link rel="stylesheet" href="<?= base_url()?>assets/lib/magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="<?= base_url()?>assets/lib/magnific-popup/jquery.magnific-popup/jquery.magnific-popup.css">
 
 
 </head>

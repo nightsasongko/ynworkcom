@@ -67,7 +67,15 @@ include "header2.php";
 				<div class="row">
 					<?php foreach ($foto_produk as $fp) : ?>
 					<div class="col-12 col-sm-12 col-md-4 col-lg-4 cmp-img">
-						<a href="<?= base_url() ?>assets/gambar_item/foto/<?= $fp['foto']?>"><img src="<?= base_url() ?>assets/gambar_item/foto/<?= $fp['foto']?>" alt="" class="img-photo-b"></a>
+						<!-- <div class="col-12" style="border: solid 1px; height: 300px; width: 300px"> -->
+						<div class="popup-gallery">
+							<div class="resources-item">
+								<div class="resources-category-image">
+									<a href="<?= base_url() ?>assets/gambar_item/foto/<?= $fp['foto']?>"><img src="<?= base_url() ?>assets/gambar_item/foto/<?= $fp['foto']?>" alt="" class="img-photo" style="border: solid 1px black; height: 200px;"></a>
+								</div>
+							</div>
+						</div>
+						<!-- </div> -->
 					</div>
 					<?php endforeach;?>
 				</div>
@@ -80,7 +88,7 @@ include "header2.php";
 			<img src="<?= base_url()?>assets/home_assets/img/bg-img.png">
 		</div>
 		
-		<!-- <div class="container">
+		<div <div class="container">
 			<div>
 				<h5 class="my-3"><b>Varian Produk</b></h5>
 

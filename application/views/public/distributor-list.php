@@ -64,12 +64,10 @@ include "header2.php";
 				</div>
 
 				<?php endforeach; ?>
-				<div class="col-12 col-sm-12 col-md-12 col-lg-12" style="text-align: center;margin-top: 10px">
-				<table class="table table-striped">
-				<p style="font-size: 18px;font-weight: bold;">
-				<?php echo $this->pagination->create_links(); ?>
-				</p>
-				</table>
+				<div class="col-12 col-sm-12 col-md-12 col-lg-12">
+					<div class="d-flex justify-content-center">
+						<?php echo $this->pagination->create_links(); ?>
+					</div>
 				</div>
 				<div class="col-12 col-sm-12 col-md-12 col-lg-12" style="margin-top: 100px;margin-bottom: -3rem">
 					<?php

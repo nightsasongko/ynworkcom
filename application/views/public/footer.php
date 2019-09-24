@@ -38,5 +38,9 @@
 <!-- JS -->
 <script type="text/javascript" src="<?= base_url()?>assets/js/script.js"></script>
 
+<!-- magnific-popup -->
+<script src="<?= base_url()?>assets/lib/magnific-popup/jquery.magnific-popup/jquery.magnific-popup.js"></script>
+<script src="<?= base_url()?>assets/lib/magnific-popup/magnific-popup.js"></script>
+
 </body>
 </html>
